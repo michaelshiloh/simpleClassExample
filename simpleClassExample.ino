@@ -48,7 +48,7 @@ class Sensor {
       for (int i = 0; i < NUM_SENSOR_READINGS; i++) {
         sum = sum + readings[i];
       }
-      average = sum / 10;
+      average = sum / NUM_SENSOR_READINGS ;
       return average;
 
     } // end of getAverage
@@ -74,7 +74,7 @@ void loop() {
   Serial.print(sensor1.getAverage());
   
   Serial.print(" Sensor 2: ");
-  Serial.print(sensor1.getAverage());
+  Serial.print(sensor2.getAverage());
   Serial.println();
 
   delay(500);
